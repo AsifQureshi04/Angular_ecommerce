@@ -1,0 +1,59 @@
+<!-- <div class="container">
+  <app-sidebar 
+    [activeLanguage]="activeLanguage" 
+    (languageSelected)="selectLanguage($event)">
+  </app-sidebar>
+  
+  <div class="content" #contentContainer>
+    <div *ngFor="let language of languages" [id]="language.id" class="language-section">
+      <div class="language-header" [style.background]="language.color">
+        <img [src]="language.icon" [alt]="language.name + ' icon'">
+        <h2>{{language.name}}</h2>
+      </div>
+      
+      <div class="language-content">
+        <p class="definition">{{language.definition}}</p>
+        
+        <div class="features">
+          <h3>Key Features:</h3>
+          <ul>
+            <li *ngFor="let feature of language.features">{{feature}}</li>
+          </ul>
+        </div>
+        
+        <div class="code-example">
+          <h3>Example Code:</h3>
+          <pre><code [highlight]="getCodeExample(language.id)" [language]="language.id"></code></pre>
+           <pre><code [highlight]="getCodeExample(language.id)" [language]="language.id"></code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<div class="content">
+  <section
+    *ngFor="let lang of ['JavaScript', 'Python', 'Java', 'C++', 'Go']"
+    [attr.id]="lang"
+    #section
+    tabindex="0"
+    [attr.aria-label]="lang + ' definition'"
+  >
+    <h2>{{ lang }}</h2>
+    <p>
+      {{ lang }} is a popular programming language known for its unique features,
+      widespread use, and contributions to software development.
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis provident in temporibus accusantium repellendus et voluptas? Alias corrupti incidunt suscipit, doloribus deserunt et deleniti quidem. Hic, soluta repellat. Iusto, repellendus!
+      Eius laboriosam aliquid architecto repellat aspernatur non voluptatem, nam adipisci. Repellendus recusandae quo corporis. Perspiciatis quae enim consequatur asperiores corrupti? Omnis nulla excepturi aspernatur nisi nostrum corporis, odit sunt asperiores.
+      Totam asperiores perspiciatis, officiis ad rem natus sunt qui recusandae, fugit vitae cumque vel ipsa adipisci impedit repellat numquam aliquam maxime unde necessitatibus possimus? Quibusdam nulla rerum est dolore sed.
+      Eum adipisci ab praesentium quasi dicta dolorum iure ex eligendi earum quae? Odio doloremque unde ullam delectus amet omnis voluptates at officiis sapiente, autem molestias dolor cum! Sapiente, eveniet optio.
+      Minus repudiandae a fugit distinctio voluptatibus eius eaque, sed ipsa eum nesciunt velit. Impedit possimus animi eius sapiente laudantium ullam voluptas perspiciatis, fugiat voluptatibus omnis laborum tempora qui illo sed!
+      Nesciunt, officiis laboriosam, non sunt perspiciatis dicta cum vel fugiat at totam aut sequi a amet suscipit incidunt! Nobis magnam commodi excepturi similique enim libero recusandae totam modi repellendus eligendi.
+      Maiores amet ab qui optio quo, deleniti nam cupiditate, reiciendis, soluta dolorum natus? Soluta, fugiat. Officiis esse, quae reiciendis sed ut nihil numquam, magni, amet adipisci qui asperiores dignissimos recusandae!
+      A temporibus sapiente atque at non ratione tenetur soluta, fugiat asperiores nisi libero veniam necessitatibus vero voluptatibus iure assumenda adipisci vitae expedita illo doloribus eum. Cupiditate, animi odit? Placeat, cupiditate.
+      Inventore laudantium minus molestias aliquid id, praesentium placeat aut rem tenetur sunt incidunt fugit? Perferendis natus aliquid itaque consequatur, architecto unde incidunt sunt placeat, modi ut, ad voluptas debitis molestias.
+      Provident eaque optio perspiciatis quo facere at ipsum earum dolores obcaecati eius quisquam inventore rerum eos suscipit possimus dolorem sit, accusamus, laborum, ut rem maxime! Voluptate velit delectus in blanditiis!
+    </p>
+  </section>
+</div>

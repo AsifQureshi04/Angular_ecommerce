@@ -1,0 +1,11 @@
+.app-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+}

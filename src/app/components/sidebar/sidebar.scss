@@ -1,0 +1,117 @@
+// .sidebar {
+//   position: fixed;
+//   left: 0;
+//   top: 0;
+//   bottom: 0;
+//   width: 280px;
+//   background: #2d3748;
+//   color: white;
+//   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+//   overflow-y: auto;
+//   z-index: 100;
+  
+//   .logo {
+//     padding: 20px;
+//     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    
+//     h2 {
+//       margin: 0;
+//       font-size: 1.5rem;
+//       font-weight: 600;
+//     }
+//   }
+  
+//   .language-list {
+//     padding: 20px 0;
+    
+//     .language-item {
+//       display: flex;
+//       align-items: center;
+//       padding: 12px 20px;
+//       cursor: pointer;
+//       transition: all 0.2s ease;
+//       border-left: 4px solid transparent;
+      
+//       &:hover {
+//         background: rgba(255, 255, 255, 0.05);
+//       }
+      
+//       &.active {
+//         background: rgba(255, 255, 255, 0.1);
+//         border-left-color: currentColor;
+//       }
+      
+//       img {
+//         width: 24px;
+//         height: 24px;
+//         margin-right: 12px;
+//       }
+      
+//       span {
+//         font-size: 1rem;
+//         font-weight: 500;
+//       }
+//     }
+//   }
+// }
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh; /* full viewport height */
+  width: 250px; /* adjust as needed */
+  overflow-y: auto; /* if sidebar content overflows */
+  background-color: #f5f5f5; /* or your sidebar background */
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  padding: 1rem;
+}
+.main-content {
+  margin-left: 250px; /* same width as sidebar */
+  padding: 1rem;
+  overflow-y: auto; /* if content is scrollable */
+  height: 100vh; /* full viewport height */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.sidebar li.active,
+.sidebar li:hover {
+  background-color: #3b82f6;
+  transform: scale(1.05);
+}
+@media (max-width: 768px) {
+  .sidebar {
+    width: 33%;
+    flex-direction: column;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .sidebar ul {
+    // display: flex;
+  }
+  .sidebar li {
+    margin: 5px;
+  }
+}
+
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
+}

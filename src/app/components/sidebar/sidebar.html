@@ -1,0 +1,33 @@
+<!-- <div class="sidebar">
+  <div class="logo">
+    <h2>Programming Languages</h2>
+  </div>
+  <div class="language-list">
+    <div 
+      *ngFor="let language of languages" 
+      class="language-item" 
+      [class.active]="language.id === activeLanguage"
+      (click)="selectLanguage(language.id)"
+      [style.border-left-color]="language.color">
+       <img [src]="language.icon" [alt]="language.name + ' icon'">
+      <span>{{language.name}}</span>
+    </div>
+  </div>
+</div> -->
+
+<nav class="sidebar" aria-label="Programming languages">
+  <ul>
+    <li
+      *ngFor="let lang of languages"
+      [class.active]="lang === currentLanguage"
+      (click)="scrollTo(lang)"
+      tabindex="0"
+      role="button"
+      [attr.aria-pressed]="lang === currentLanguage"
+    >
+    
+    <span class="icon" aria-hidden="true">💻</span>
+      <span>{{ lang }}</span>
+    </li>
+  </ul>
+</nav>
