@@ -29,11 +29,10 @@ export class Checkout {
    this.checkoutFormGroup = this.formBuilder.group({
       customer: this.formBuilder.group({
         firstName: new FormControl('', 
-                                [Validators.required,Validators.minLength(2),
-                                 Luv2ShopValidators.notOnlyWhitespace]),
+                                [Validators.required,Luv2ShopValidators.checkTwoChars,
+                                 ]),
         lastName: new FormControl('', 
-                                [Validators.required,Validators.minLength(2),
-                                 Luv2ShopValidators.notOnlyWhitespace]),
+                                [Validators.required,Luv2ShopValidators.checkTwoChars]),
         email: new FormControl('', 
                             [Validators.required, 
                              Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$'),
@@ -43,34 +42,34 @@ export class Checkout {
       shippingAddress: this.formBuilder.group({
         country: new FormControl('', [Validators.required]),
         street: new FormControl('', 
-                                [Validators.required,Validators.minLength(2),
+                                [Validators.required,Luv2ShopValidators.checkTwoChars,
                                  Luv2ShopValidators.notOnlyWhitespace]),
         city: new FormControl('', 
-                                [Validators.required,Validators.minLength(2),
+                                [Validators.required,Luv2ShopValidators.checkTwoChars,
                                  Luv2ShopValidators.notOnlyWhitespace]),
         state: new FormControl('', [Validators.required]),
         zipCode:new FormControl('', 
-                                [Validators.required,Validators.minLength(2),
+                                [Validators.required,Luv2ShopValidators.checkTwoChars,
                                  Luv2ShopValidators.notOnlyWhitespace])
       }),
 
       billingAddress: this.formBuilder.group({
            country: new FormControl('', [Validators.required]),
         street: new FormControl('', 
-                                [Validators.required,Validators.minLength(2),
+                                [Validators.required,Luv2ShopValidators.checkTwoChars,
                                  Luv2ShopValidators.notOnlyWhitespace]),
         city: new FormControl('', 
-                                [Validators.required,Validators.minLength(2),
+                                [Validators.required,Luv2ShopValidators.checkTwoChars,
                                  Luv2ShopValidators.notOnlyWhitespace]),
         state: new FormControl('', [Validators.required]),
         zipCode:new FormControl('', 
-                                [Validators.required,Validators.minLength(2),
+                                [Validators.required,Luv2ShopValidators.checkTwoChars,
                                  Luv2ShopValidators.notOnlyWhitespace])
       }),
 
       creditCard: this.formBuilder.group({
         cardType: new FormControl('', Validators.required),
-        nameOnCard: new FormControl('', [Validators.required,Validators.minLength(2), Luv2ShopValidators.notOnlyWhitespace]),
+        nameOnCard: new FormControl('', [Validators.required,Luv2ShopValidators.checkTwoChars, Luv2ShopValidators.notOnlyWhitespace]),
         cardNumber: new FormControl('', [Validators.required,Validators.pattern('[0-9]{16}')]),
         securityCode: new FormControl('', [Validators.required,Validators.pattern('[0-9]{3}')]),
         expirationMonth:['',Validators.required],

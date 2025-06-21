@@ -59,18 +59,18 @@
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh; /* full viewport height */
-  width: 250px; /* adjust as needed */
-  overflow-y: auto; /* if sidebar content overflows */
-  background-color: #f5f5f5; /* or your sidebar background */
+  height: 100vh; 
+  width: 250px; 
+  overflow-y: auto; 
+  background-color: #f5f5f5; 
   box-shadow: 2px 0 5px rgba(0,0,0,0.1);
   padding: 1rem;
 }
 .main-content {
-  margin-left: 250px; /* same width as sidebar */
+  margin-left: 250px; 
   padding: 1rem;
-  overflow-y: auto; /* if content is scrollable */
-  height: 100vh; /* full viewport height */
+  overflow-y: auto; 
+  height: 100vh; 
 }
 
 .sidebar ul {
@@ -88,11 +88,15 @@
   border-radius: 8px;
   transition: background-color 0.3s, transform 0.2s;
 }
-.sidebar li.active,
-.sidebar li:hover {
+.sidebar li.active {
   background-color: #3b82f6;
   transform: scale(1.05);
 }
+.sidebar li:hover {
+  background-color: #e1e7f1;
+  transform: scale(1.05);
+}
+
 @media (max-width: 768px) {
   .sidebar {
     width: 33%;
