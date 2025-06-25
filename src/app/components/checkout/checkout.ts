@@ -124,10 +124,6 @@ export class Checkout {
     }
 
     const cartItem = this.cartService.cartItems;
-    // let orderItems: OrderItem[] = [];
-    // for(let i = 0; i<cartItem.length; i++){
-    //   orderItems[i] = new OrderItem(cartItem[i]);
-    // }
 
     let order = new Order();
     order.totalPrice = this.totalPrice;

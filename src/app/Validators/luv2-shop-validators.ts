@@ -12,7 +12,7 @@ export class Luv2ShopValidators {
 
     static checkTwoChars(control:FormControl):ValidationErrors{
         if((control.value != null) && (control.value.trim().length < 2)){
-            return {'lessThanTwoChar':true} 
+            return {'checkTwoChars':true} 
         }
         else return null!;
     }
