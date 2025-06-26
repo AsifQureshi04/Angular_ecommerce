@@ -24,8 +24,6 @@ import { OktaAuthModule } from '@okta/okta-angular';
 // import { MatIconModule } from '@angular/material/icon';
 
 
-
-
 @NgModule({
   declarations: [
     App,
@@ -48,7 +46,7 @@ import { OktaAuthModule } from '@okta/okta-angular';
     NgbPaginationModule,
     ReactiveFormsModule,
     HighlightModule,
-    // OktaAuthModule
+    OktaAuthModule
     // MatIconModule
   ],
   providers: [
