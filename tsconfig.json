@@ -3,6 +3,9 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "@okta/okta-auth-js": [
+        "node_modules/@okta/okta-auth-js/lib/index.d.ts"
+      ],
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,

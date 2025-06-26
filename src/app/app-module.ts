@@ -18,6 +18,9 @@ import { LanguageDefinitions } from './components/language-definitions/language-
 import { Sidebar } from './components/sidebar/sidebar';
 import { LanguageData } from './services/language-data';
 import { HIGHLIGHT_OPTIONS, HighlightModule } from 'ngx-highlightjs';
+import { Login } from './components/login/login';
+import { LoginStatus } from './components/login-status/login-status';
+import { OktaAuthModule } from '@okta/okta-angular';
 // import { MatIconModule } from '@angular/material/icon';
 
 
@@ -34,7 +37,9 @@ import { HIGHLIGHT_OPTIONS, HighlightModule } from 'ngx-highlightjs';
     CartDetail,
     Checkout,
     LanguageDefinitions,
-    Sidebar
+    Sidebar,
+    Login,
+    LoginStatus
   ],
   imports: [
     BrowserModule,
@@ -43,6 +48,7 @@ import { HIGHLIGHT_OPTIONS, HighlightModule } from 'ngx-highlightjs';
     NgbPaginationModule,
     ReactiveFormsModule,
     HighlightModule,
+    // OktaAuthModule
     // MatIconModule
   ],
   providers: [
