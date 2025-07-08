@@ -4,8 +4,12 @@ import { ProductList } from './components/product-list/product-list';
 import { ProductDetails } from './components/product-details/product-details';
 import { CartDetail } from './components/cart-detail/cart-detail';
 import { Checkout } from './components/checkout/checkout';
+import { OktaCallbackComponent} from '@okta/okta-angular'
+
+
 
 const routes: Routes = [
+  {path:'login',component:OktaCallbackComponent},
   {path:"cart-detail",component:CartDetail},
   {path:"checkout",component:Checkout},
   {path:"products/:id",component:ProductDetails},
