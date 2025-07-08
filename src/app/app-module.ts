@@ -20,9 +20,13 @@ import { LanguageData } from './services/language-data';
 import { HIGHLIGHT_OPTIONS, HighlightModule } from 'ngx-highlightjs';
 import { Login } from './components/login/login';
 import { LoginStatus } from './components/login-status/login-status';
-import { OktaAuthModule } from '@okta/okta-angular';
+import { OktaAuthModule, OKTA_CONFIG } from '@okta/okta-angular';
+import { OktaAuth } from '@okta/okta-auth-js';
 // import { MatIconModule } from '@angular/material/icon';
 
+import myAppConfig from './config/my-app-config';
+const oktaConfig = myAppConfig.oidc;
+const oktaAuth = new OktaAuth(oktaConfig);
 
 @NgModule({
   declarations: [
@@ -65,7 +69,8 @@ import { OktaAuthModule } from '@okta/okta-angular';
           csharp: () => import('highlight.js/lib/languages/csharp')
         }
       }
-    }
+    },
+    { provide: OKTA_CONFIG, useValue: { oktaAuth } }
   ],
   bootstrap: [App]
 })
